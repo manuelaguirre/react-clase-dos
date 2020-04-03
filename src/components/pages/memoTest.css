@@ -1,0 +1,105 @@
+ /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+ .row{
+   height: 200px;
+ }
+
+ #comenzar{
+   margin:auto;
+ }
+
+ 
+ .cuadro {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    margin: 6px;
+    
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .cuadro-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .memo-card-face-up .cuadro-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .cuadro-front, .cuadro-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .cuadro-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .cuadro-back {
+    transform: rotateY(180deg);
+    
+  }
+
+  .juego{
+   visibility: hidden;
+  }
+
+  .juego-activo{
+    visibility: visible;
+  }
+
+
+  .carta01 .cuadro-back{
+    background-image:url("../../img/220px-Eduardo_duhalde_presidente-cropthis.jpeg");
+  }
+
+  .carta02 .cuadro-back{
+    background-image:url("../../img/220px-Mauricio_Macri_2016-cropthis.jpeg");  
+  }
+
+  .carta03 .cuadro-back{
+    background-image:url("../../img/220px-Raúl_Alfonsin-cropthis.jpeg");
+    background-position: right center;  
+  }
+
+  .carta04 .cuadro-back{
+    background-image:url("../../img/250px-Fernando_de_la_Rúa_con_bastón_y_banda_de_presidente.jpg");  
+  }
+
+  .carta05 .cuadro-back{
+    background-image:url("../../img/250px-Menem_con_banda_presidencial.jpg"); 
+   }
+
+  .carta06 .cuadro-back{
+    background-image:url("../../img/270px-Alberto_fernandez_presidente_\(cropped\)-cropthis.jpeg"); 
+    background-position: center;
+   }
+
+  .carta07 .cuadro-back{
+    background-image:url("../../img/200px-Cristinakirchnermensaje2010.jpg");  
+  }
+
+  .carta08 .cuadro-back{
+    background-image:url("../../img/Presidente_Nestor_Kirchner_(cropped).jpg");  
+  }
+
+
+  .memo-card-clear{
+      opacity: 0%;
+    transition: opacity  0.5s ;
+  }
+      
+   
+
