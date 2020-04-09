@@ -108,7 +108,7 @@ const useTicTacToeGameState = (initialPlayer) => {
   };
   const restart = () => {
     const newTiles = ['', '', '', '', '', '', '', '', ''];
-    setTiles(newTiles);
+    setTiles(...newTiles);
     setCurrentPlayer('X');
   };
 

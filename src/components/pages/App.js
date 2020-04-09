@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React, { useState } from 'react';
 import Home from './Home';
 import TitleChanger from './TitleChanger';
@@ -8,6 +9,7 @@ import FocusableInput from './FocusableInput';
 import UglyClass from './UglyClass';
 import FancyButton from '../small/FancyButton';
 import TicTacToe from './TicTacToe';
+import memoTest from './memoTest';
 
 const pages = {
   home: {
@@ -37,6 +39,10 @@ const pages = {
   ticTacToe: {
     name: 'Tic Tac Toe',
     component: TicTacToe,
+  },
+  memoTest: {
+    name: 'Memotest',
+    component: memoTest,
   },
 };
 
