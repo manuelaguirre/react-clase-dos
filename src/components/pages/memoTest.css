@@ -52,8 +52,8 @@
     
   }
 
-  .juego{
-   visibility: hidden;
+  .collapsed{
+   visibility: collapse;
   }
 
   .juego-activo{
